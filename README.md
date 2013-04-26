@@ -2,7 +2,31 @@
 
 Infers http entity headers from path, entity and existing headers.
 
+## Functionality
+
+If any of the following headers are not given:
+
+* `content-type` header is set to the type returned by [`mime.lookup`](https://github.com/broofa/node-mime#mimelookuppath) with `charset` set  according to [`mime.charsets.lookup`](https://github.com/broofa/node-mime#mimecharsetslookup) (if any).
+* `content-length` is set to the length of the entity buffer.
+* `last-modified` is set to the current time.
+* `etag` is set the MD5 hash of the entity buffer.
+
+Any given headers are left alone. Header names will be transformed to lowercase.
+
 ## Usage
+
+The exported function takes three arguments: `url`, `entity` and `headers`. 
+
+* `url` can be an absolute url or just a relative path. Only the path is used.
+* `entity` is optional. If it's provided, it must be either a Buffer or a String.
+* `headers` is optional too. It signifies the current headers for the entity. Headers which are already set will be left alone.
+
+```javascript
+var inferHeaders = require("infer-entity-headers")
+var headers = inferHeaders("/somefile.txt", "some contents", {})
+```
+
+The returned `headers` object contains all existing headers plus any inferred headers.
 
 ## Credits
 
