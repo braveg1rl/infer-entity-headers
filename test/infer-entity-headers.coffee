@@ -16,7 +16,8 @@ expectedHeaders =
     "content-type": "text/plain;charset=UTF-8",
     "last-modified": timestamp
 
-loremIpsum = new Buffer "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus quam, consectetur ut nullam."
+loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus quam, consectetur ut nullam."
+loremIpsumBuffer = new Buffer loremIpsum
 
 describe "inferEntityHeaders", ->
   it "works for '/'", ->
@@ -26,5 +27,8 @@ describe "inferEntityHeaders", ->
     headers = inferHeaders "/index.html"
     assert.deepEqual headers, expectedHeaders['/index.html']
   it "works for '/some.txt', Buffer(100)", ->
-    headers = inferHeaders "/some.txt", loremIpsum
+    headers = inferHeaders "/some.txt", loremIpsumBuffer
+    assert.deepEqual headers, expectedHeaders['/some.txt']
+  it "works for '/lorem.txt', String(100)", ->
+    headers = inferHeaders "/lorem.txt", loremIpsum
     assert.deepEqual headers, expectedHeaders['/some.txt']
