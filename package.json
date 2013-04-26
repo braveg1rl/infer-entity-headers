@@ -12,7 +12,9 @@
     "url": "git://github.com/meryn/infer-entity-headers.git"
   },
   "private": false,
-  "dependencies": {},
+  "dependencies": {
+    "mime": "~1.2.9"
+  },
   "devDependencies": {
     "coffee-script": "~1.6.2",
     "mocha": "~1.9.0"
