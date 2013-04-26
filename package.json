@@ -2,7 +2,7 @@
   "name": "infer-entity-headers",
   "description": "Infers http entity headers from path, entity and existing headers.",
   "keywords": [],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Meryn Stol <merynstol@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/meryn/infer-entity-headers",
