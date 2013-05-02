@@ -8,12 +8,12 @@ expectedHeaders =
     "content-type": "application/octet-stream",
     "last-modified": timestamp
   "/index.html":
-    "content-type": "text/html;charset=UTF-8",
+    "content-type": "text/html; charset=UTF-8",
     "last-modified": timestamp
   "/some.txt":
     "content-length": "100",
     "etag": "9a77a90ce30586b60c6fc8f333d4c374",
-    "content-type": "text/plain;charset=UTF-8",
+    "content-type": "text/plain; charset=UTF-8",
     "last-modified": timestamp
 
 loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus quam, consectetur ut nullam."
