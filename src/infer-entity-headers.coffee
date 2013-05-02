@@ -1,5 +1,4 @@
 parseURL = require("url").parse
-mime = require "mime"
 crypto = require "crypto"
 guessType = require "guess-content-type"
 
