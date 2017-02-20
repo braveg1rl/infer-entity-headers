@@ -1,5 +1,7 @@
 # infer-entity-headers [![Build Status](https://travis-ci.org/meryn/infer-entity-headers.png?branch=master)](https://travis-ci.org/meryn/infer-entity-headers) [![Dependency Status](https://david-dm.org/meryn/infer-entity-headers.png)](https://david-dm.org/meryn/infer-entity-headers)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/braveg1rl/infer-entity-headers.svg)](https://greenkeeper.io/)
+
 Infers http entity headers from path, entity and existing headers.
 
 ## Functionality
