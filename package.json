@@ -13,11 +13,11 @@
   },
   "private": false,
   "dependencies": {
-    "guess-content-type": "0.0.1"
+    "guess-content-type": "0.1.0"
   },
   "devDependencies": {
-    "coffee-script": "~1.6.2",
-    "mocha": "~1.9.0"
+    "coffee-script": "~1.12.4",
+    "mocha": "~3.2.0"
   },
   "optionalDependencies": {},
   "engines": {
